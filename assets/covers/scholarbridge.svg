@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="ScholarBridge architecture diagram">
+  <rect width="1200" height="675" fill="#101419"/>
+  <g stroke="#ffffff" stroke-opacity=".06">
+    <path d="M0 75h1200M0 150h1200M0 225h1200M0 300h1200M0 375h1200M0 450h1200M0 525h1200M0 600h1200"/>
+    <path d="M100 0v675M200 0v675M300 0v675M400 0v675M500 0v675M600 0v675M700 0v675M800 0v675M900 0v675M1000 0v675M1100 0v675"/>
+  </g>
+  <g fill="none" stroke="#e9b454" stroke-width="2">
+    <path d="M250 338h140M540 338h150M840 250v-90h150M840 426v90h150"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".4" stroke-width="1.5" stroke-dasharray="7 7">
+    <path d="M440 250h100M440 426h100"/>
+  </g>
+  <!-- nodes -->
+  <g>
+    <rect x="90" y="293" width="160" height="90" rx="6" fill="#171d24" stroke="#ffffff" stroke-opacity=".28"/>
+    <text x="170" y="332" fill="#eceff3" font-family="monospace" font-size="17" text-anchor="middle">Student</text>
+    <text x="170" y="358" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">next.js client</text>
+  </g>
+  <g>
+    <rect x="390" y="293" width="150" height="90" rx="6" fill="#171d24" stroke="#e9b454" stroke-opacity=".7"/>
+    <text x="465" y="332" fill="#e9b454" font-family="monospace" font-size="17" text-anchor="middle">REST API</text>
+    <text x="465" y="358" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">spring boot</text>
+  </g>
+  <g>
+    <rect x="690" y="293" width="150" height="90" rx="6" fill="#171d24" stroke="#ffffff" stroke-opacity=".28"/>
+    <text x="765" y="332" fill="#eceff3" font-family="monospace" font-size="17" text-anchor="middle">Neon</text>
+    <text x="765" y="358" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">postgresql</text>
+  </g>
+  <g>
+    <rect x="990" y="120" width="170" height="72" rx="6" fill="#171d24" stroke="#e9b454" stroke-opacity=".5"/>
+    <text x="1075" y="150" fill="#eceff3" font-family="monospace" font-size="15" text-anchor="middle">Google Gemini</text>
+    <text x="1075" y="172" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">ai layer</text>
+  </g>
+  <g>
+    <rect x="990" y="484" width="170" height="72" rx="6" fill="#171d24" stroke="#ffffff" stroke-opacity=".28"/>
+    <text x="1075" y="514" fill="#eceff3" font-family="monospace" font-size="15" text-anchor="middle">Render</text>
+    <text x="1075" y="536" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">deployment</text>
+  </g>
+  <!-- intermediate soft nodes -->
+  <g fill="#171d24" stroke="#ffffff" stroke-opacity=".22">
+    <rect x="390" y="180" width="100" height="44" rx="4"/>
+    <rect x="390" y="452" width="100" height="44" rx="4"/>
+  </g>
+  <text x="440" y="208" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">auth</text>
+  <text x="440" y="480" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">payload</text>
+  <text x="90" y="620" fill="#e9b454" font-family="monospace" font-size="14" letter-spacing="3">SCHOLARBRIDGE / SYSTEM MAP</text>
+</svg>

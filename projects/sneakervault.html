@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sneaker Vault — Case study &mdash; Boateng-Kissi Benjamin (Forson)</title>
+<meta name="description" content="Sneaker Vault: a sneaker reselling storefront founded in 2023 and built on Next.js, Paystack, Resend, Neon Postgres and Vercel Blob.">
+<meta name="theme-color" content="#f5f5f7">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sneaker Vault — Case study">
+<meta property="og:description" content="A real business with real payment verification, not a checkout demo.">
+<meta property="og:image" content="../assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="brandmark" href="../index.html">
+    <span class="mono-badge" aria-hidden="true">BF</span>
+    <span class="brandtext">B. Forson<span>Builder</span></span>
+  </a>
+  <div class="topbar-actions">
+    <button class="iconbtn" data-theme-toggle type="button" aria-label="Switch to dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button class="iconbtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav id="mobileNav" aria-label="Primary">
+  <div class="nav">
+    <a href="../index.html"><i>01</i> Intro</a>
+    <a href="../index.html#about"><i>02</i> About</a>
+    <a href="../index.html#experience"><i>03</i> Experience</a>
+    <a href="../index.html#projects"><i>04</i> Projects</a>
+    <a href="../index.html#education"><i>05</i> Education</a>
+    <a href="../index.html#contact"><i>06</i> Contact</a>
+  </div>
+</nav>
+
+<aside class="sidebar">
+  <div>
+    <div class="brandmark">
+      <span class="mono-badge" aria-hidden="true">BF</span>
+      <span class="brandtext">Boateng-Kissi Benjamin (Forson)<span>Builder · Accra</span></span>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <a href="../index.html#intro"><i>01</i> Intro</a>
+      <a href="../index.html#about"><i>02</i> About</a>
+      <a href="../index.html#experience"><i>03</i> Experience</a>
+      <a href="../index.html#projects" class="is-active"><i>04</i> Projects</a>
+      <a href="../index.html#education"><i>05</i> Education</a>
+      <a href="../index.html#contact"><i>06</i> Contact</a>
+    </nav>
+  </div>
+
+  <div class="sidefoot">
+    <div class="socials">
+      <a class="iconbtn" href="https://github.com/jayminforson" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.53 11.53 0 0 0 23.5 12.02C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+      <a class="iconbtn" href="mailto:boatengkissibenjamin@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg>
+      </a>
+      <a class="iconbtn" href="https://www.linkedin.com/in/boateng-kissi-benjaminamin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.4 8.75 21 11.1 21 14.2V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21H9z"/></svg>
+      </a>
+      <a class="iconbtn" href="../index.html#projects" aria-label="All projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6l2 2h8v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"/></svg>
+      </a>
+      <button class="iconbtn" data-theme-toggle type="button" aria-label="Switch to dark theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+    <p class="sideline">boatengkissibenjamin@gmail.com<br>Accra, Ghana · GMT+0</p>
+  </div>
+</aside>
+
+<main class="main cs" id="main">
+
+  <section class="section cs-top">
+    <div class="wrap">
+      <a class="backlink" href="../index.html#projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        All projects
+      </a>
+      <p class="cs-kicker">Entrepreneurship · Software</p>
+      <h1>Sneaker Vault</h1>
+      <p class="lede">The sneaker reselling business I founded in 2023, rebuilt from direct messages and spreadsheets into a storefront with verified payments, receipts and an admin panel.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap cs-hero">
+      <figure class="frame">
+        <img src="../assets/covers/sneakervault.svg" alt="Sneaker Vault storefront product grid and Paystack checkout flow" width="1200" height="675">
+        <figcaption>Storefront → checkout → verified payment</figcaption>
+      </figure>
+
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Founder, designer, developer</dd></div>
+        <div><dt>Founded</dt><dd>2023</dd></div>
+        <div><dt>Status</dt><dd>Live</dd></div>
+        <div><dt>Stack</dt><dd>Next.js App Router · React 19 · Tailwind CSS v4</dd></div>
+        <div><dt>Data</dt><dd>Neon PostgreSQL · Vercel Blob</dd></div>
+        <div><dt>Payments</dt><dd>Paystack (server-side verification)</dd></div>
+        <div><dt>Email</dt><dd>Resend</dd></div>
+        <div><dt>Links</dt><dd><a class="accent" href="https://www.sneakervault.live" target="_blank" rel="noopener">sneakervault.live</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Problem</h2>
+      <div class="case-body">
+        <p>I started reselling sneakers in 2023. The early version of the business ran on conversations: catalogue in my head, orders in my inbox, prices in a spreadsheet, confirmation by screenshot. It worked until it didn't: mismatched sizes, missed follow-ups, and no single place where a customer could see what was actually available.</p>
+        <p>The problem was not demand. It was that the business had no system.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Why it mattered</h2>
+      <div class="case-body">
+        <p>Sneaker resale runs on trust. A buyer sending money for a pair they have only seen in a photo is taking a risk, and every unclear step is a reason to abandon the purchase. Turning that into a storefront with visible stock, explicit sizing and a real payment flow is not cosmetic; it is what makes a stranger comfortable enough to pay.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>My role</h2>
+      <div class="case-body">
+        <p>Founder and sole builder. I run the business and wrote the software behind it.</p>
+        <ul>
+          <li>Defined the brand direction: minimal, niche and professional, with a scalable mark, a dark version for light surfaces and a red accent, with no checkerboard and no clutter</li>
+          <li>Designed and built the storefront, product detail pages and three-step checkout</li>
+          <li>Integrated Paystack, including the server-side verification step</li>
+          <li>Built the admin panel: login, product CRUD with image upload, orders dashboard and status management</li>
+          <li>Owned deployment, database, storage and email configuration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Technical approach</h2>
+      <div class="case-body">
+        <ul>
+          <li><strong>Next.js App Router</strong> with React 19 and Tailwind CSS v4: server components for the catalogue, route handlers for the API surface.</li>
+          <li><strong>Neon Postgres</strong> as the single source of truth for products, stock and orders. Vercel's filesystem is read-only, so nothing is written to disk at runtime.</li>
+          <li><strong>Vercel Blob</strong> for uploaded product imagery, keeping images off the compute layer.</li>
+          <li><strong>Paystack popup checkout</strong>, with the transaction verified server-side before an order is ever marked as paid.</li>
+          <li><strong>Resend</strong> for transactional email: a customer receipt and an owner alert on every completed order.</li>
+          <li><strong>Session-cookie authentication</strong> for the admin panel, deliberately simple rather than a third-party auth dependency.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Implementation</h2>
+      <div class="case-body">
+        <p>The decision that shaped everything else was treating the frontend as disposable and the data as permanent. Every product, order and image lives in Postgres or Blob storage, so redeploying, rebuilding the UI or changing hosting does not lose the business.</p>
+        <p>The second was payment verification. The client confirms a payment, but only the server marks an order paid, by checking the transaction with Paystack's API using the secret key. A browser that reports success is a suggestion; a server-verified transaction is a fact.</p>
+        <ul>
+          <li>Size handling covers US / UK / EUR / CM conversions rather than assuming one convention</li>
+          <li>Catalogue seeded idempotently through a migration script, so re-running it never duplicates data</li>
+          <li>All secrets (payment keys, database URLs, email credentials) live in environment variables and never in the repository</li>
+          <li>Seed data separated from real orders so testing never pollutes production</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Impact</h2>
+      <div class="case-body">
+        <p>Sneaker Vault has been running as a public storefront since launch, at <a class="accent" href="https://www.sneakervault.live" target="_blank" rel="noopener">sneakervault.live</a>, with an admin panel I use to manage the catalogue and fulfil orders myself.</p>
+        <div class="callout">
+          <p>The measurable outcome I care about most: a customer can now go from landing on the site to a server-verified paid order with a receipt in their inbox, without me touching a spreadsheet.</p>
+        </div>
+        <p class="muted" style="font-size:.875rem">Revenue and volume figures are deliberately not published here. They can be shared privately with serious partners or acquirers on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Challenges</h2>
+      <div class="case-body">
+        <ul>
+          <li><strong>Read-only hosting.</strong> Early assumptions about saving files locally broke on deployment. Moving products, orders and images to a database and Blob storage was the fix, not a patch.</li>
+          <li><strong>Payment trust edge cases.</strong> Abandoned checkouts, double-submits and delayed webhooks all want to mark an order paid. Server-side verification and idempotent status updates closed those gaps.</li>
+          <li><strong>Brand consistency.</strong> Getting a mark that survives at 16px, works on dark backgrounds and still looks professional took as many iterations as the code.</li>
+          <li><strong>Email deliverability.</strong> Custom-domain sending requires verified sender records; getting them right before launch prevented orders from landing in spam folders.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>What I learned</h2>
+      <div class="case-body">
+        <p>Building software for your own money teaches restraint. Every feature has to justify itself against the time it takes away from sourcing, listing and fulfilling, so the admin panel is plain, fast and boring on purpose.</p>
+        <p>I also learned that the least glamorous 30% of a project (DNS records, sender verification, environment variables, migrations) is what separates a demo from a business.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Links</h2>
+      <div class="case-body">
+        <div class="linklist">
+          <a href="https://www.sneakervault.live" target="_blank" rel="noopener">Live storefront <span>sneakervault.live ↗</span></a>
+          <a href="https://github.com/jayminforson" target="_blank" rel="noopener">Source &amp; other repositories <span>github.com/jayminforson ↗</span></a>
+          <a href="../index.html#contact">Ask about the business or the build <span>Get in touch →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <nav class="case-nav" aria-label="Project navigation">
+        <a class="btn btn--ghost" href="scholarbridge.html">← ScholarBridge</a>
+        <a class="btn btn--primary" href="gramic-platform.html">GRAMIC Platform →</a>
+      </nav>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footline">
+        <span>&copy; <span data-year>2026</span> Boateng-Kissi Benjamin (Forson)</span>
+        <span>Accra, Ghana</span>
+        <a href="../index.html#projects">All projects ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="GRAMIC management platform dashboard concept">
+  <rect width="1200" height="675" fill="#0f1318"/>
+  <g stroke="#ffffff" stroke-opacity=".055">
+    <path d="M0 84h1200M0 168h1200M0 252h1200M0 336h1200M0 420h1200M0 504h1200M0 588h1200"/>
+    <path d="M100 0v675M200 0v675M300 0v675M400 0v675M500 0v675M600 0v675M700 0v675M800 0v675M900 0v675M1000 0v675M1100 0v675"/>
+  </g>
+  <!-- sidebar -->
+  <rect x="90" y="110" width="176" height="450" rx="8" fill="#161b21" stroke="#ffffff" stroke-opacity=".22"/>
+  <rect x="112" y="140" width="132" height="34" rx="5" fill="#e9b454" fill-opacity=".16" stroke="#e9b454" stroke-opacity=".7"/>
+  <g fill="#ffffff" fill-opacity=".22">
+    <rect x="112" y="196" width="112" height="10" rx="5"/>
+    <rect x="112" y="228" width="94" height="10" rx="5"/>
+    <rect x="112" y="260" width="122" height="10" rx="5"/>
+    <rect x="112" y="292" width="86" height="10" rx="5"/>
+    <rect x="112" y="324" width="106" height="10" rx="5"/>
+  </g>
+  <!-- main panels -->
+  <g fill="#161b21" stroke="#ffffff" stroke-opacity=".22">
+    <rect x="300" y="110" width="380" height="150" rx="8"/>
+    <rect x="710" y="110" width="400" height="150" rx="8"/>
+    <rect x="300" y="290" width="380" height="270" rx="8"/>
+    <rect x="710" y="290" width="400" height="270" rx="8"/>
+  </g>
+  <!-- KPI -->
+  <text x="326" y="150" fill="#98a2b0" font-family="monospace" font-size="13" letter-spacing="2">OUTREACHES</text>
+  <text x="326" y="212" fill="#e9b454" font-family="'Space Grotesk',Arial" font-size="58" font-weight="700">10+</text>
+  <text x="736" y="150" fill="#98a2b0" font-family="monospace" font-size="13" letter-spacing="2">YOUTH CONNECTED</text>
+  <text x="736" y="212" fill="#eceff3" font-family="'Space Grotesk',Arial" font-size="58" font-weight="700">120+</text>
+  <!-- bar chart -->
+  <g fill="#e9b454" fill-opacity=".75">
+    <rect x="330" y="450" width="34" height="70" rx="3"/>
+    <rect x="382" y="418" width="34" height="102" rx="3"/>
+    <rect x="434" y="440" width="34" height="80" rx="3"/>
+    <rect x="486" y="376" width="34" height="144" rx="3"/>
+    <rect x="538" y="404" width="34" height="116" rx="3"/>
+    <rect x="590" y="352" width="34" height="168" rx="3"/>
+  </g>
+  <path d="M330 526h318" stroke="#ffffff" stroke-opacity=".3"/>
+  <text x="330" y="332" fill="#98a2b0" font-family="monospace" font-size="13" letter-spacing="2">PROGRAMS BY MONTH</text>
+  <!-- member list -->
+  <text x="736" y="332" fill="#98a2b0" font-family="monospace" font-size="13" letter-spacing="2">VOLUNTEER ROSTER</text>
+  <g>
+    <g fill="#ffffff" fill-opacity=".16">
+      <rect x="736" y="356" width="26" height="26" rx="13"/>
+      <rect x="774" y="364" width="140" height="10" rx="5"/>
+      <rect x="736" y="404" width="26" height="26" rx="13"/>
+      <rect x="774" y="412" width="110" height="10" rx="5"/>
+      <rect x="736" y="452" width="26" height="26" rx="13"/>
+      <rect x="774" y="460" width="162" height="10" rx="5"/>
+      <rect x="736" y="500" width="26" height="26" rx="13"/>
+      <rect x="774" y="508" width="124" height="10" rx="5"/>
+    </g>
+    <g fill="#e9b454" fill-opacity=".8">
+      <rect x="1020" y="364" width="66" height="16" rx="8"/>
+      <rect x="1020" y="412" width="66" height="16" rx="8" fill-opacity=".45"/>
+      <rect x="1020" y="460" width="66" height="16" rx="8" fill-opacity=".65"/>
+      <rect x="1020" y="508" width="66" height="16" rx="8" fill-opacity=".3"/>
+    </g>
+  </g>
+  <text x="90" y="628" fill="#e9b454" font-family="monospace" font-size="14" letter-spacing="3">GRAMIC OPERATIONS PLATFORM / CONCEPT</text>
+</svg>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Door-Unlocking Mechanism — Case study &mdash; Boateng-Kissi Benjamin (Forson)</title>
+<meta name="description" content="An Arduino-controlled door unlocking mechanism: access without a physical key, designed around a practical community use case.">
+<meta name="theme-color" content="#f5f5f7">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Door-Unlocking Mechanism — Case study">
+<meta property="og:description" content="Access without handing over a key: a hardware study in who is allowed through a door.">
+<meta property="og:image" content="../assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="brandmark" href="../index.html">
+    <span class="mono-badge" aria-hidden="true">BF</span>
+    <span class="brandtext">B. Forson<span>Builder</span></span>
+  </a>
+  <div class="topbar-actions">
+    <button class="iconbtn" data-theme-toggle type="button" aria-label="Switch to dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button class="iconbtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav id="mobileNav" aria-label="Primary">
+  <div class="nav">
+    <a href="../index.html"><i>01</i> Intro</a>
+    <a href="../index.html#about"><i>02</i> About</a>
+    <a href="../index.html#experience"><i>03</i> Experience</a>
+    <a href="../index.html#projects"><i>04</i> Projects</a>
+    <a href="../index.html#education"><i>05</i> Education</a>
+    <a href="../index.html#contact"><i>06</i> Contact</a>
+  </div>
+</nav>
+
+<aside class="sidebar">
+  <div>
+    <div class="brandmark">
+      <span class="mono-badge" aria-hidden="true">BF</span>
+      <span class="brandtext">Boateng-Kissi Benjamin (Forson)<span>Builder · Accra</span></span>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <a href="../index.html#intro"><i>01</i> Intro</a>
+      <a href="../index.html#about"><i>02</i> About</a>
+      <a href="../index.html#experience"><i>03</i> Experience</a>
+      <a href="../index.html#projects" class="is-active"><i>04</i> Projects</a>
+      <a href="../index.html#education"><i>05</i> Education</a>
+      <a href="../index.html#contact"><i>06</i> Contact</a>
+    </nav>
+  </div>
+
+  <div class="sidefoot">
+    <div class="socials">
+      <a class="iconbtn" href="https://github.com/jayminforson" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.53 11.53 0 0 0 23.5 12.02C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+      <a class="iconbtn" href="mailto:boatengkissibenjamin@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg>
+      </a>
+      <a class="iconbtn" href="https://www.linkedin.com/in/boateng-kissi-benjaminamin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.4 8.75 21 11.1 21 14.2V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21H9z"/></svg>
+      </a>
+      <a class="iconbtn" href="../index.html#projects" aria-label="All projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6l2 2h8v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"/></svg>
+      </a>
+      <button class="iconbtn" data-theme-toggle type="button" aria-label="Switch to dark theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+    <p class="sideline">boatengkissibenjamin@gmail.com<br>Accra, Ghana · GMT+0</p>
+  </div>
+</aside>
+
+<main class="main cs" id="main">
+
+  <section class="section cs-top">
+    <div class="wrap">
+      <a class="backlink" href="../index.html#projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        All projects
+      </a>
+      <p class="cs-kicker">Hardware</p>
+      <h1>Door-Unlocking Mechanism</h1>
+      <p class="lede">An Arduino-controlled entry system built around a practical question: how do you give several people access to a shared space without handing out a key that can be copied?</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap cs-hero">
+      <figure class="frame">
+        <img src="../assets/covers/door-lock.svg" alt="Door unlocking mechanism schematic: keypad and power feeding an Arduino controller which drives a door lock, buzzer and LED" width="1200" height="675">
+        <figcaption>Signal flow: credential in, actuation out</figcaption>
+      </figure>
+
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Concept, circuit design and firmware</dd></div>
+        <div><dt>Domain</dt><dd>Embedded / physical access control</dd></div>
+        <div><dt>Status</dt><dd>Prototype</dd></div>
+        <div><dt>Controller</dt><dd>Arduino</dd></div>
+        <div><dt>Inputs</dt><dd>Keypad / pushbutton credential entry</dd></div>
+        <div><dt>Outputs</dt><dd>Electric lock actuator · buzzer · LED</dd></div>
+        <div><dt>Power</dt><dd>Regulated supply, separate actuation path</dd></div>
+        <div><dt>Related</dt><dd><a class="accent" href="opengrid-sentinel.html">OpenGrid Sentinel</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Problem</h2>
+      <div class="case-body">
+        <p>Shared spaces in community settings (a storeroom, an office, a lab) usually rely on a physical key. Keys get copied, lent and lost, and nobody can tell you afterwards who opened the door or when. Rekeying is expensive and rarely happens, so the problem quietly gets worse.</p>
+        <p>The goal was a mechanism where access could be granted, changed or revoked without touching the hardware.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Why it mattered</h2>
+      <div class="case-body">
+        <p>This is framed around community benefit rather than home security: the organisations I work with pass keys between volunteers and staff constantly, and every handover is a moment where accountability disappears. The same mechanism that lets you revoke a credential instead of changing a lock is what makes shared resources manageable at scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>My role</h2>
+      <div class="case-body">
+        <p>Sole designer and builder across the whole mechanism.</p>
+        <ul>
+          <li>Defined the credential model and the states of the system: locked, unlocked, denied, alarm</li>
+          <li>Designed the circuit, including separating the logic supply from the actuator load</li>
+          <li>Wrote the firmware: credential capture, comparison, timeout handling and feedback</li>
+          <li>Selected and wired the lock actuator, buzzer and status LEDs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Technical approach</h2>
+      <div class="case-body">
+        <ul>
+          <li><strong>Credential entry</strong> through a keypad or button sequence, read as a bounded input with a clear timeout, so an incomplete entry cannot hold the system hostage.</li>
+          <li><strong>Comparison logic</strong> held in firmware with a fixed attempt counter, so repeated wrong entries lock the input out for a period rather than allowing unlimited guessing.</li>
+          <li><strong>Lock actuation</strong> driven through a transistor or relay rather than straight from a GPIO pin, because an actuator's current draw will damage a microcontroller output.</li>
+          <li><strong>Timed unlock.</strong> The lock releases for a fixed window and re-engages automatically, so a door left ajar cannot leave the mechanism open indefinitely.</li>
+          <li><strong>Feedback</strong> through buzzer and LEDs: distinct patterns for accepted, denied and locked-out states.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Implementation</h2>
+      <div class="case-body">
+        <p>The decision that mattered most was electrical, not logical: driving the lock from the microcontroller directly is the obvious mistake and a fatal one. Isolating the actuation path protects the controller and keeps the logic stable while the lock draws current.</p>
+        <ul>
+          <li>Non-blocking state machine in the firmware (entry collection, verification, unlock window, lockout) instead of nested delays</li>
+          <li>Timeouts on both credential entry and the unlocked window, so the system always returns to a known safe state</li>
+          <li>Credentials stored as a fixed-size constant in firmware for the prototype, with a clear boundary where a real deployment would need tamper-resistant storage</li>
+          <li>Feedback patterns designed to be distinguishable without a display</li>
+        </ul>
+        <div class="callout">
+          <p><strong>Deliberate limit:</strong> this is a prototype demonstrating mechanism and control logic. A deployment handling real access would need encrypted credential storage, an audit log, tamper detection and fail-safe (not fail-secure) behaviour on power loss. That gap is stated rather than glossed over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Impact</h2>
+      <div class="case-body">
+        <p>The prototype establishes the full loop (credential in, decision, actuation, feedback, relock) on commodity hardware, and validates the control pattern used elsewhere in my hardware work.</p>
+        <p>Its real value is as a design study: it made me write down what a system must do when power fails, when someone guesses repeatedly, or when a door is left open. Those questions apply far beyond door locks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Challenges</h2>
+      <div class="case-body">
+        <ul>
+          <li><strong>Actuator current.</strong> Solenoid locks draw far more than a GPIO can supply, and the inductive kick on release can reset the board without protection.</li>
+          <li><strong>Input debouncing.</strong> Mechanical buttons bounce, and a bouncing press looks like several keystrokes, which turns a four-digit code into nonsense.</li>
+          <li><strong>State clarity.</strong> Without a display, the system has to communicate through sound and light alone, which forced a simple, consistent vocabulary of signals.</li>
+          <li><strong>Failure modes.</strong> Deciding what happens on power loss is a safety question before it is a programming one, and it changes component selection.</li>
+          <li><strong>Security honesty.</strong> It is easy to build something that looks secure and is not. Being explicit about the prototype's limits was part of the work.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>What I learned</h2>
+      <div class="case-body">
+        <p>Access control is mostly about the unhappy paths. The happy path (correct code, door opens) is ten lines. Everything that makes the system trustworthy happens when things go wrong.</p>
+        <p>I also learned that hardware forces a kind of discipline software does not: you cannot refactor a burnt-out pin, so you think harder before you commit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Links</h2>
+      <div class="case-body">
+        <div class="linklist">
+          <a href="https://github.com/jayminforson" target="_blank" rel="noopener">Source &amp; other repositories <span>github.com/jayminforson ↗</span></a>
+          <a href="opengrid-sentinel.html">Related build: OpenGrid Sentinel <span>Case study →</span></a>
+          <a href="../index.html#contact">Ask for the circuit diagram or firmware <span>Get in touch →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <nav class="case-nav" aria-label="Project navigation">
+        <a class="btn btn--ghost" href="opengrid-sentinel.html">← OpenGrid Sentinel</a>
+        <a class="btn btn--primary" href="cpu-64bit.html">64-bit CPU Project →</a>
+      </nav>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footline">
+        <span>&copy; <span data-year>2026</span> Boateng-Kissi Benjamin (Forson)</span>
+        <span>Accra, Ghana</span>
+        <a href="../index.html#projects">All projects ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

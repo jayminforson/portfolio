@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="OpenGrid Sentinel sensor node wiring diagram">
+  <rect width="1200" height="675" fill="#0e1216"/>
+  <g stroke="#ffffff" stroke-opacity=".055">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200M0 630h1200"/>
+    <path d="M90 0v675M180 0v675M270 0v675M360 0v675M450 0v675M540 0v675M630 0v675M720 0v675M810 0v675M900 0v675M990 0v675M1080 0v675"/>
+  </g>
+  <!-- board -->
+  <rect x="470" y="230" width="260" height="215" rx="8" fill="#141a20" stroke="#e9b454" stroke-opacity=".75" stroke-width="2"/>
+  <rect x="492" y="252" width="86" height="60" rx="4" fill="#1b222a" stroke="#ffffff" stroke-opacity=".3"/>
+  <rect x="600" y="252" width="108" height="34" rx="4" fill="#1b222a" stroke="#ffffff" stroke-opacity=".3"/>
+  <g fill="#ffffff" fill-opacity=".35">
+    <rect x="492" y="336" width="216" height="8" rx="4"/>
+    <rect x="492" y="356" width="160" height="8" rx="4"/>
+    <rect x="492" y="376" width="196" height="8" rx="4"/>
+    <rect x="492" y="396" width="120" height="8" rx="4"/>
+  </g>
+  <text x="600" y="472" fill="#e9b454" font-family="monospace" font-size="15" text-anchor="middle" letter-spacing="2">ARDUINO UNO</text>
+  <!-- wires -->
+  <g fill="none" stroke-width="2">
+    <path d="M470 262H330V150" stroke="#e9b454" stroke-opacity=".85"/>
+    <path d="M470 302H270V470" stroke="#7fd4c1" stroke-opacity=".7"/>
+    <path d="M730 262H880V150" stroke="#e9b454" stroke-opacity=".6"/>
+    <path d="M730 302H930V470" stroke="#7fd4c1" stroke-opacity=".55"/>
+    <path d="M600 445v90" stroke="#ffffff" stroke-opacity=".4" stroke-dasharray="6 6"/>
+  </g>
+  <!-- sensors -->
+  <g>
+    <rect x="170" y="104" width="160" height="76" rx="6" fill="#161c23" stroke="#ffffff" stroke-opacity=".3"/>
+    <text x="250" y="136" fill="#eceff3" font-family="monospace" font-size="14" text-anchor="middle">DHT11/22</text>
+    <text x="250" y="160" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">temp / humidity</text>
+  </g>
+  <g>
+    <rect x="150" y="434" width="240" height="76" rx="6" fill="#161c23" stroke="#ffffff" stroke-opacity=".3"/>
+    <text x="270" y="466" fill="#eceff3" font-family="monospace" font-size="14" text-anchor="middle">HC-SR04 + PIR</text>
+    <text x="270" y="490" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">distance / motion</text>
+  </g>
+  <g>
+    <rect x="790" y="104" width="180" height="76" rx="6" fill="#161c23" stroke="#ffffff" stroke-opacity=".3"/>
+    <text x="880" y="136" fill="#eceff3" font-family="monospace" font-size="14" text-anchor="middle">LDR + LED</text>
+    <text x="880" y="160" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">light sensing</text>
+  </g>
+  <g>
+    <rect x="830" y="434" width="200" height="76" rx="6" fill="#161c23" stroke="#ffffff" stroke-opacity=".3"/>
+    <text x="930" y="466" fill="#eceff3" font-family="monospace" font-size="14" text-anchor="middle">BUZZER + BTN</text>
+    <text x="930" y="490" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">alert / manual</text>
+  </g>
+  <!-- LCD -->
+  <g>
+    <rect x="450" y="540" width="300" height="76" rx="6" fill="#101a14" stroke="#e9b454" stroke-opacity=".7"/>
+    <text x="600" y="574" fill="#7ee0a0" font-family="monospace" font-size="15" text-anchor="middle">GRID: STABLE 220V</text>
+    <text x="600" y="600" fill="#7ee0a0" font-family="monospace" font-size="13" text-anchor="middle" opacity=".7">T 28C  H 71%  OK</text>
+  </g>
+  <text x="90" y="60" fill="#e9b454" font-family="monospace" font-size="14" letter-spacing="3">OPENGRID SENTINEL / SENSOR NODE</text>
+</svg>

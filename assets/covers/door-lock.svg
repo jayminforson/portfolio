@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Arduino door unlocking mechanism schematic">
+  <rect width="1200" height="675" fill="#0f1318"/>
+  <g stroke="#ffffff" stroke-opacity=".055">
+    <path d="M0 96h1200M0 192h1200M0 288h1200M0 384h1200M0 480h1200M0 576h1200"/>
+    <path d="M96 0v675M192 0v675M288 0v675M384 0v675M480 0v675M576 0v675M672 0v675M768 0v675M864 0v675M960 0v675M1056 0v675"/>
+  </g>
+  <!-- door -->
+  <g>
+    <rect x="830" y="120" width="300" height="440" rx="6" fill="#161b21" stroke="#ffffff" stroke-opacity=".28"/>
+    <path d="M830 120h300v440H830z" fill="none" stroke="#ffffff" stroke-opacity=".18"/>
+    <circle cx="878" cy="352" r="17" fill="none" stroke="#e9b454" stroke-width="3"/>
+    <path d="M878 369v46" stroke="#e9b454" stroke-width="6" stroke-linecap="round"/>
+    <rect x="1010" y="300" width="70" height="110" rx="6" fill="#1b222a" stroke="#e9b454" stroke-opacity=".8" stroke-width="2"/>
+    <text x="1045" y="362" fill="#e9b454" font-family="monospace" font-size="13" text-anchor="middle">LOCK</text>
+  </g>
+  <!-- controller -->
+  <g>
+    <rect x="130" y="250" width="300" height="180" rx="8" fill="#141a20" stroke="#ffffff" stroke-opacity=".3"/>
+    <rect x="156" y="278" width="96" height="66" rx="4" fill="#1b222a" stroke="#ffffff" stroke-opacity=".3"/>
+    <g fill="#ffffff" fill-opacity=".32">
+      <rect x="156" y="366" width="248" height="9" rx="4"/>
+      <rect x="156" y="388" width="196" height="9" rx="4"/>
+      <rect x="156" y="410" width="224" height="9" rx="4"/>
+    </g>
+    <text x="280" y="466" fill="#eceff3" font-family="monospace" font-size="15" text-anchor="middle" letter-spacing="2">ARDUINO CONTROLLER</text>
+  </g>
+  <!-- keypad -->
+  <g>
+    <rect x="130" y="90" width="300" height="112" rx="8" fill="#161b21" stroke="#ffffff" stroke-opacity=".3"/>
+    <g fill="#1b222a" stroke="#ffffff" stroke-opacity=".28">
+      <rect x="156" y="120" width="52" height="30" rx="4"/><rect x="220" y="120" width="52" height="30" rx="4"/>
+      <rect x="284" y="120" width="52" height="30" rx="4"/><rect x="348" y="120" width="52" height="30" rx="4"/>
+      <rect x="156" y="160" width="52" height="30" rx="4"/><rect x="220" y="160" width="52" height="30" rx="4"/>
+      <rect x="284" y="160" width="52" height="30" rx="4"/><rect x="348" y="160" width="52" height="30" rx="4" fill="#e9b454" fill-opacity=".85"/>
+    </g>
+  </g>
+  <!-- power / feedback -->
+  <g>
+    <rect x="130" y="486" width="142" height="74" rx="6" fill="#161b21" stroke="#ffffff" stroke-opacity=".3"/>
+    <text x="201" y="520" fill="#eceff3" font-family="monospace" font-size="13" text-anchor="middle">POWER SUPPLY</text>
+    <text x="201" y="544" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">regulated 5V</text>
+    <rect x="288" y="486" width="142" height="74" rx="6" fill="#161b21" stroke="#ffffff" stroke-opacity=".3"/>
+    <text x="359" y="520" fill="#eceff3" font-family="monospace" font-size="13" text-anchor="middle">BUZZER / LED</text>
+    <text x="359" y="544" fill="#98a2b0" font-family="monospace" font-size="12" text-anchor="middle">access feedback</text>
+  </g>
+  <!-- wiring -->
+  <g fill="none" stroke-width="2">
+    <path d="M280 250V202" stroke="#ffffff" stroke-opacity=".45"/>
+    <path d="M280 430v56" stroke="#ffffff" stroke-opacity=".45"/>
+    <path d="M430 300h180v54h220" stroke="#e9b454" stroke-opacity=".85"/>
+    <path d="M430 386h150v76h250" stroke="#7fd4c1" stroke-opacity=".7" stroke-dasharray="7 7"/>
+  </g>
+  <g fill="#e9b454">
+    <circle cx="830" cy="354" r="6"/><circle cx="430" cy="300" r="5"/><circle cx="430" cy="386" r="5"/>
+  </g>
+  <text x="130" y="640" fill="#e9b454" font-family="monospace" font-size="14" letter-spacing="3">DOOR UNLOCK MECHANISM / SIGNAL FLOW</text>
+</svg>
