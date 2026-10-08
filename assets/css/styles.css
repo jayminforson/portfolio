@@ -352,6 +352,10 @@ figure{margin:0}
 .edu h3{font-size:16.5px;letter-spacing:-.02em;margin-bottom:5px}
 .edu .job-role{margin-bottom:9px}
 .edu p{font-size:15.2px;color:var(--text-2);margin:0;max-width:62ch}
+.edu ul{display:flex;flex-direction:column;gap:7px;margin-top:11px}
+.edu ul li{position:relative;padding-left:19px;font-size:15.2px;color:var(--text-2);line-height:1.6;max-width:62ch}
+.edu ul li::before{content:"";position:absolute;left:2px;top:.72em;width:7px;height:1.5px;
+  background:var(--accent);opacity:.6;border-radius:2px}
 @media (min-width:760px){.edu{grid-template-columns:140px 1fr;gap:26px}}
 
 .factgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:12px;margin-top:26px}
