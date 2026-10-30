@@ -103,13 +103,13 @@
   <section class="section section--tight">
     <div class="wrap cs-hero">
       <figure class="frame">
-        <img src="../assets/covers/gramic-platform.svg" alt="GRAMIC operations dashboard concept showing outreach metrics, charts and volunteer roster" width="1200" height="675">
-        <figcaption>Concept dashboard: operations at a glance</figcaption>
+        <img src="../assets/covers/gramic-platform.svg" alt="GRAMIC operations dashboard showing outreach metrics, charts and volunteer roster" width="1200" height="675">
+        <figcaption>Dashboard design: operations at a glance</figcaption>
       </figure>
 
       <dl class="spec">
         <div><dt>Role</dt><dd>Product owner, technical &amp; design lead</dd></div>
-        <div><dt>Status</dt><dd>In design · PRD complete, build pending</dd></div>
+        <div><dt>Status</dt><dd>Live · deployed, team access only</dd></div>
         <div><dt>Organisation</dt><dd>GRAMIC's Foundation (youth-led NGO)</dd></div>
         <div><dt>Users</dt><dd>Leadership, IT &amp; media team, volunteers</dd></div>
         <div><dt>Scope</dt><dd>Outreaches · volunteers · programmes · reporting</dd></div>
@@ -144,10 +144,10 @@
       <div class="case-body">
         <p>As Head of the IT &amp; Media Team I own the technical direction of the foundation. For this platform that means:</p>
         <ul>
-          <li>Interviewing the volunteers and leadership who would actually use it, and writing what they said into a product requirements document</li>
+          <li>Interviewing the volunteers and leadership who actually use it, and writing what they said into a product requirements document</li>
           <li>Designing the information architecture: programmes, outreaches, volunteers, attendance, media and reports</li>
           <li>Proposing the technical approach and making the build-versus-buy case</li>
-          <li>Producing the interface design and the dashboards leadership would see first</li>
+          <li>Producing the interface design and the dashboards leadership sees first</li>
         </ul>
       </div>
     </div>
@@ -157,13 +157,13 @@
     <div class="wrap case-grid">
       <h2>Technical approach</h2>
       <div class="case-body">
-        <p>The proposal builds on stack I already run in production elsewhere, so the foundation inherits skills rather than a bespoke system nobody can maintain:</p>
+        <p>The platform builds on a stack I already run in production elsewhere, so the foundation inherits skills rather than a bespoke system nobody can maintain:</p>
         <ul>
           <li><strong>Next.js</strong> front end: the same framework as the foundation's existing website, so any team member can contribute</li>
           <li><strong>PostgreSQL</strong> for programmes, outreach records, volunteers and attendance, with role-based access so a volunteer sees their own tasks and leadership sees everything</li>
           <li><strong>Media library</strong> for outreach photography, tagged by programme and date so reports can be assembled instead of searched for</li>
           <li><strong>Reporting views</strong> that generate the numbers the foundation already reports by hand</li>
-          <li>Deployment on a free-tier host first, migrating only when usage demands it</li>
+          <li>Deployed on a free-tier host first, migrating only when usage demands it</li>
         </ul>
       </div>
     </div>
@@ -173,7 +173,7 @@
     <div class="wrap case-grid">
       <h2>Implementation</h2>
       <div class="case-body">
-        <p>The most important engineering decision so far has been to <em>not write code yet</em>. The PRD and the design work came first, because building a system from assumptions is how non-profit software ends up abandoned after two months.</p>
+        <p>The most important engineering decision on this project was to <em>write the PRD and the design before any code</em>. Building a system from assumptions is how non-profit software ends up abandoned after two months, so the documentation came first and the build followed it.</p>
         <p>Sequenced deliberately:</p>
         <ul>
           <li>Map the current workflow end to end: where information actually lives today</li>
@@ -182,7 +182,7 @@
           <li>Ship that thin slice, measure whether volunteers adopt it, then expand</li>
         </ul>
         <div class="callout">
-          <p><strong>Status:</strong> product requirements and technical/design work are complete. The build has not started, and I am marking this as <em>in design</em> rather than claiming a deployment that does not exist.</p>
+          <p><strong>Status:</strong> product requirements, technical design and the first usable slice are complete, and the platform is deployed for the foundation's team. Access is internal, so there is no public link to show. Next: measure volunteer adoption, then expand into reporting and the media library.</p>
         </div>
       </div>
     </div>
@@ -192,12 +192,12 @@
     <div class="wrap case-grid">
       <h2>Impact</h2>
       <div class="case-body">
-        <p>Two things have already changed because of this work, before a line of production code:</p>
+        <p>Two things changed before a line of production code was written, and both still hold now that the platform is live:</p>
         <ul>
           <li>The foundation's operations are documented for the first time: a written record of programmes, outreaches and roles that survives any single volunteer leaving</li>
           <li>Impact figures (10+ outreaches, 120+ youth, 15 programmes) have a defined source, which makes them defensible to a donor instead of merely asserted</li>
         </ul>
-        <p>Operational impact from the platform itself will be measured after launch: adoption rate, hours saved on reporting, and attendance recorded per outreach.</p>
+        <p>Operational impact is being measured now that the platform is live: adoption rate, hours saved on reporting, and attendance recorded per outreach. I am not reporting figures until they exist.</p>
       </div>
     </div>
   </section>
@@ -231,10 +231,10 @@
       <h2>Links</h2>
       <div class="case-body">
         <div class="linklist">
-          <a href="https://gramics-foundation-site.vercel.app" target="_blank" rel="noopener">GRAMIC's Foundation website <span>gramics-foundation-site.vercel.app ↗</span></a>
+          <a href="https://gramics-foundation-eta.vercel.app" target="_blank" rel="noopener">GRAMIC's Foundation website <span>gramics-foundation-eta.vercel.app ↗</span></a>
           <a href="https://github.com/jayminforson/GRAMICs-Foundation-site" target="_blank" rel="noopener">Foundation website source <span>GitHub ↗</span></a>
           <a href="../index.html#experience">My role at GRAMIC <span>Experience →</span></a>
-          <a href="../index.html#contact">Ask about the PRD or the design <span>Get in touch →</span></a>
+          <a href="../index.html#contact">Ask about the platform <span>Get in touch →</span></a>
         </div>
       </div>
     </div>
