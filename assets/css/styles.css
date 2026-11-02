@@ -516,10 +516,14 @@ figure{margin:0}
 /* ---------- print ---------- */
 @media print{
   *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-  .sidebar,.topbar,#mobileNav,.site-footer,.no-print{display:none!important}
+  .sidebar,.topbar,#mobileNav,.site-footer,.skip-link,.no-print{display:none!important}
   .main{margin:0}
   body,body::before{background:#fff!important;color:#000}
   body::before{display:none}
+  /* the theme greys are tuned for a dark screen; on paper they wash out.
+     :root[data-theme] outranks both :root and [data-theme="light"]. */
+  :root,:root[data-theme]{--text:#000;--text-2:#333333;--text-3:#4a4a4a;
+    --line:rgba(0,0,0,.2);--line-2:rgba(0,0,0,.12)}
   .wrap{max-width:none;padding:0}
   .resume-doc{background:#fff;border:0;box-shadow:none;padding:0;border-radius:0}
   .section{padding:0;border:0}
