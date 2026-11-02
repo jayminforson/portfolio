@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lazy — Case study &mdash; Boateng-Kissi Benjamin (Forson)</title>
+<meta name="description" content="Lazy: a free, open-source AI companion for macOS with voice chat, screen awareness, agent runs behind confirmation gates, mail triage and a desktop sticky board.">
+<meta name="theme-color" content="#f5f5f7">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lazy — Case study">
+<meta property="og:description" content="A menu-bar AI companion for macOS, assembled entirely from free tiers and local services.">
+<meta property="og:image" content="https://jayminforson.github.io/portfolio/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="brandmark" href="../index.html">
+    <span class="mono-badge" aria-hidden="true">BF</span>
+    <span class="brandtext">B. Forson<span>Builder</span></span>
+  </a>
+  <div class="topbar-actions">
+    <button class="iconbtn" data-theme-toggle type="button" aria-label="Switch to dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button class="iconbtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav id="mobileNav" aria-label="Primary">
+  <div class="nav">
+    <a href="../index.html"><i>01</i> Intro</a>
+    <a href="../index.html#about"><i>02</i> About</a>
+    <a href="../index.html#experience"><i>03</i> Experience</a>
+    <a href="../index.html#projects"><i>04</i> Projects</a>
+    <a href="../index.html#education"><i>05</i> Education</a>
+    <a href="../index.html#contact"><i>06</i> Contact</a>
+  </div>
+</nav>
+
+<aside class="sidebar">
+  <div>
+    <div class="brandmark">
+      <span class="mono-badge" aria-hidden="true">BF</span>
+      <span class="brandtext">Boateng-Kissi Benjamin (Forson)<span>Builder · Accra</span></span>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <a href="../index.html#intro"><i>01</i> Intro</a>
+      <a href="../index.html#about"><i>02</i> About</a>
+      <a href="../index.html#experience"><i>03</i> Experience</a>
+      <a href="../index.html#projects" class="is-active"><i>04</i> Projects</a>
+      <a href="../index.html#education"><i>05</i> Education</a>
+      <a href="../index.html#contact"><i>06</i> Contact</a>
+    </nav>
+  </div>
+
+  <div class="sidefoot">
+    <div class="socials">
+      <a class="iconbtn" href="https://github.com/jayminforson" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.53 11.53 0 0 0 23.5 12.02C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+      <a class="iconbtn" href="mailto:boatengkissibenjamin@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg>
+      </a>
+      <a class="iconbtn" href="https://www.linkedin.com/in/boateng-kissi-benjaminamin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.4 8.75 21 11.1 21 14.2V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21H9z"/></svg>
+      </a>
+      <a class="iconbtn" href="../index.html#projects" aria-label="All projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6l2 2h8v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"/></svg>
+      </a>
+      <button class="iconbtn" data-theme-toggle type="button" aria-label="Switch to dark theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+    <p class="sideline">boatengkissibenjamin@gmail.com<br>Accra, Ghana · GMT+0</p>
+  </div>
+</aside>
+
+<main class="main cs" id="main">
+
+  <section class="section cs-top">
+    <div class="wrap">
+      <a class="backlink" href="../index.html#projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        All projects
+      </a>
+      <p class="cs-kicker">Software · AI</p>
+      <h1>Lazy</h1>
+      <p class="lede">A free, open-source AI companion for macOS that lives in your menu bar: hold a hotkey to talk, let it see your screen, and have it drive apps, triage mail and keep a sticky board under your windows.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap cs-hero">
+      <figure class="frame">
+        <img src="../assets/covers/lazy.svg" alt="Lazy system map: voice and screen input flowing through transcription to the brain, then a tool gate and macOS, with mail, skills, a local opencode fallback and the sticky board attached" width="1200" height="675">
+        <figcaption>Input, brain, gated action: every external layer is substitutable</figcaption>
+      </figure>
+
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Design and implementation (solo)</dd></div>
+        <div><dt>Platform</dt><dd>macOS 14.2+ (Intel &amp; Apple Silicon)</dd></div>
+        <div><dt>Language</dt><dd>Swift · SwiftUI</dd></div>
+        <div><dt>Status</dt><dd>Open source</dd></div>
+        <div><dt>Licence</dt><dd>MIT</dd></div>
+        <div><dt>Permissions</dt><dd>Microphone · Screen Recording · Accessibility · Speech Recognition</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Problem</h2>
+      <div class="case-body">
+        <p>An assistant that is genuinely useful on a desktop has to do four hard things at once: listen without becoming a Dock app, understand what is on screen, act on the system, and avoid doing anything destructive while it works. Each is a solved problem on its own. The difficulty is holding all four in one process that still answers quickly enough to feel like a conversation.</p>
+        <p>Commercial macOS companions already do this, on a subscription. The question I set myself was whether the same shape of product could be assembled entirely from free tiers and local services, with no paid API and no telemetry account behind it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Why it mattered</h2>
+      <div class="case-body">
+        <p>Every layer has a paid default. Speech recognition, the model behind the replies, the voice that speaks them, and mail understanding all want a credit card. Building on free tiers means each of those can be unavailable, rate-limited or slower than expected, which changes how the code is structured rather than merely which keys are configured.</p>
+        <p>It also keeps the running cost honest: the whole app costs nothing to use, and there is no subscription hiding behind it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>My role</h2>
+      <div class="case-body">
+        <p>Sole designer and implementer across the whole application:</p>
+        <ul>
+          <li>Architecture: the layering between input, transcription, brain transports, tool execution and spoken output</li>
+          <li>The SwiftUI surfaces: menu-bar panel, notch chat sheet, home window, sticky board and the walkthrough overlays</li>
+          <li>The Accessibility layer that indexes on-screen elements and drives them</li>
+          <li>Mail integration end to end: OAuth, classification, notification and draft-before-send</li>
+          <li>The skills catalogue and the prompt layer that injects skills on demand</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Technical approach</h2>
+      <div class="case-body">
+        <ul>
+          <li><strong>Hotkey input.</strong> A global shortcut monitor for push-to-talk on <code>ctrl+option</code> and dictation on <code>fn+control</code>, so the app never needs keyboard focus to start listening.</li>
+          <li><strong>Transcription behind a protocol.</strong> Apple's on-device speech, AssemblyAI streaming and OpenAI's API are interchangeable providers rather than a hard dependency.</li>
+          <li><strong>Brain transports behind a protocol.</strong> Gemini's free tier is the default, with Ollama, OpenAI, Claude and a local opencode server as alternatives, so no single vendor is load-bearing.</li>
+          <li><strong>Spoken output with a fallback.</strong> ElevenLabs while its free quota lasts, then the macOS system voice without a code change at the call site.</li>
+          <li><strong>Confirmation before side effects.</strong> A tool gate and a risk gate in the execution path, so anything that sends, deletes or purchases asks first.</li>
+          <li><strong>Accessibility control.</strong> Element indexing and location detection to read and drive arbitrary interfaces, which is what turns a chat window into something that can open System Settings.</li>
+          <li><strong>Skills on demand.</strong> 38 bundled skills plus personal ones, injected into context when relevant instead of sitting resident in every prompt.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Implementation</h2>
+      <div class="case-body">
+        <p>The decision that shaped the build was making every external capability substitutable. Speech, brain and voice each sit behind a protocol with more than one implementation, so a quota running out or an API changing becomes a configuration change instead of a rewrite.</p>
+        <ul>
+          <li>One provider protocol per capability, so an exhausted free tier degrades rather than breaks</li>
+          <li>Confirmation gates placed in the tool path itself, not in the view, so every route to a side effect passes through them</li>
+          <li>Accessibility indexing written to tolerate missing elements, because interfaces get renamed between releases</li>
+          <li>Permissions requested at first run with a reason attached, since macOS silently denies anything asked for too late</li>
+          <li>Main-thread stall reporting built in, because a voice loop that blocks feels broken even when the answer is correct</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Impact</h2>
+      <div class="case-body">
+        <p>What exists today is a working application: hold the hotkey, speak, and the reply is spoken back; ask it to create a folder or open a settings pane and it does so once you confirm. Mail is classified, urgent items raise a banner, and replies are drafted for approval rather than sent on their own.</p>
+        <div class="callout">
+          <p>The transferable result was not any single feature. It was the layering: once speech, brain and voice are protocols rather than integrations, adding a fourth transport is a small amount of code, which is the difference between a demo and something maintainable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Challenges</h2>
+      <div class="case-body">
+        <ul>
+          <li><strong>Permissions.</strong> macOS gates microphone, screen recording, accessibility and speech recognition separately, and each one is a trip to System Settings. Asking at the right moment, and recovering cleanly when a permission is refused, took as much care as the features behind them.</li>
+          <li><strong>Fragile UI automation.</strong> Driving other applications through Accessibility means depending on interfaces I do not own. Indexing and location detection have to be written expecting elements to be absent or renamed.</li>
+          <li><strong>Free-tier ceilings.</strong> Every layer has a quota, and they expire on different schedules. Voice, transcription and model access each degrade differently, so the fallbacks are per layer rather than one global switch.</li>
+          <li><strong>Latency.</strong> A conversation only feels natural if the round trip stays short, which pushes work off the main thread and argues against doing everything at once.</li>
+          <li><strong>Safety.</strong> An agent that can drive the system is an agent that can delete things. The gates are deliberately insistent: confirming is cheaper than undoing.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>What I learned</h2>
+      <div class="case-body">
+        <p>Substitutability is the actual feature. The interesting part of this build is not any single capability; it is that speech, brain, voice and mail can each be swapped without touching the rest of the system.</p>
+        <p>The second lesson is that safety belongs in the path, not the interface. A confirmation prompt in a view can be routed around by the next feature that calls the same action. A gate in the tool path cannot.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap case-grid">
+      <h2>Links</h2>
+      <div class="case-body">
+        <div class="linklist">
+          <a href="https://github.com/jayminforson/lazy" target="_blank" rel="noopener">Source on GitHub <span>github.com/jayminforson/lazy ↗</span></a>
+          <a href="https://github.com/jayminforson" target="_blank" rel="noopener">Other repositories <span>github.com/jayminforson ↗</span></a>
+          <a href="../index.html#contact">Ask about the architecture <span>Get in touch →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <nav class="case-nav" aria-label="Project navigation">
+        <a class="btn btn--ghost" href="used-car-price.html">← Used-Car Price Prediction</a>
+        <a class="btn btn--primary" href="scholarbridge.html">ScholarBridge →</a>
+      </nav>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footline">
+        <span>&copy; <span data-year>2026</span> Boateng-Kissi Benjamin (Forson)</span>
+        <span>Accra, Ghana</span>
+        <a href="../index.html#projects">All projects ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

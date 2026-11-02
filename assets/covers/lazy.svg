@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Lazy system map: voice and screen input, transcription, brain, tool gate and macOS, with mail, skills, local fallback and sticky board attached">
+  <rect width="1200" height="675" fill="#101419"/>
+  <g stroke="#ffffff" stroke-opacity=".06">
+    <path d="M0 75h1200M0 150h1200M0 225h1200M0 300h1200M0 375h1200M0 450h1200M0 525h1200M0 600h1200"/>
+    <path d="M100 0v675M200 0v675M300 0v675M400 0v675M500 0v675M600 0v675M700 0v675M800 0v675M900 0v675M1000 0v675M1100 0v675"/>
+  </g>
+
+  <!-- pipeline -->
+  <g fill="none" stroke="#e9b454" stroke-width="2">
+    <path d="M235 348h50M480 348h50M715 348h50M940 348h50"/>
+  </g>
+  <g fill="#e9b454">
+    <path d="M277 342l8 6-8 6z"/>
+    <path d="M522 342l8 6-8 6z"/>
+    <path d="M757 342l8 6-8 6z"/>
+    <path d="M982 342l8 6-8 6z"/>
+  </g>
+
+  <!-- secondary links -->
+  <g fill="none" stroke="#ffffff" stroke-opacity=".4" stroke-width="1.5" stroke-dasharray="7 7">
+    <path d="M555 222v78M695 222v78M625 396v44M875 396v44"/>
+  </g>
+
+  <!-- pipeline nodes -->
+  <g>
+    <rect x="50" y="300" width="185" height="96" rx="6" fill="#171d24" stroke="#ffffff" stroke-opacity=".28"/>
+    <text x="142" y="340" fill="#eceff3" font-family="monospace" font-size="17" text-anchor="middle">Voice &amp; screen</text>
+    <text x="142" y="368" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">hotkey · capture</text>
+  </g>
+  <g>
+    <rect x="285" y="300" width="195" height="96" rx="6" fill="#171d24" stroke="#ffffff" stroke-opacity=".28"/>
+    <text x="382" y="340" fill="#eceff3" font-family="monospace" font-size="17" text-anchor="middle">Transcription</text>
+    <text x="382" y="368" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">apple · assemblyai</text>
+  </g>
+  <g>
+    <rect x="530" y="300" width="185" height="96" rx="6" fill="#171d24" stroke="#e9b454" stroke-opacity=".7"/>
+    <text x="622" y="340" fill="#e9b454" font-family="monospace" font-size="17" text-anchor="middle">Brain</text>
+    <text x="622" y="368" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">gemini free tier</text>
+  </g>
+  <g>
+    <rect x="765" y="300" width="175" height="96" rx="6" fill="#171d24" stroke="#e9b454" stroke-opacity=".7"/>
+    <text x="852" y="340" fill="#e9b454" font-family="monospace" font-size="17" text-anchor="middle">Tool gate</text>
+    <text x="852" y="368" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">confirm first</text>
+  </g>
+  <g>
+    <rect x="990" y="300" width="160" height="96" rx="6" fill="#171d24" stroke="#ffffff" stroke-opacity=".28"/>
+    <text x="1070" y="340" fill="#eceff3" font-family="monospace" font-size="17" text-anchor="middle">macOS</text>
+    <text x="1070" y="368" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">apps · settings</text>
+  </g>
+
+  <!-- upper chips -->
+  <g>
+    <rect x="495" y="170" width="120" height="52" rx="4" fill="#171d24" stroke="#ffffff" stroke-opacity=".22"/>
+    <text x="555" y="202" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">Mail</text>
+  </g>
+  <g>
+    <rect x="635" y="170" width="120" height="52" rx="4" fill="#171d24" stroke="#ffffff" stroke-opacity=".22"/>
+    <text x="695" y="202" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">Skills · 38</text>
+  </g>
+
+  <!-- lower chips -->
+  <g>
+    <rect x="545" y="440" width="160" height="52" rx="4" fill="#171d24" stroke="#e9b454" stroke-opacity=".45"/>
+    <text x="625" y="472" fill="#e9b454" font-family="monospace" font-size="13" text-anchor="middle">Local opencode</text>
+  </g>
+  <g>
+    <rect x="800" y="440" width="150" height="52" rx="4" fill="#171d24" stroke="#ffffff" stroke-opacity=".22"/>
+    <text x="875" y="472" fill="#98a2b0" font-family="monospace" font-size="13" text-anchor="middle">Sticky board</text>
+  </g>
+
+  <text x="50" y="620" fill="#e9b454" font-family="monospace" font-size="14" letter-spacing="3">LAZY / SYSTEM MAP</text>
+</svg>

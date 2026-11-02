@@ -4,7 +4,7 @@ Personal site and résumé for **Boateng-Kissi Benjamin (Forson)**, a self-taugh
 who grew up in Kwahu and is based in Accra, Ghana.
 
 Static, build-free, and small on purpose. Three entry points: a one-page overview, a résumé
-built for printing, and seven case studies that keep the reasoning, not just the screenshots.
+built for printing, and eight case studies that keep the reasoning, not just the screenshots.
 
 ## Contents
 
@@ -12,7 +12,7 @@ built for printing, and seven case studies that keep the reasoning, not just the
 | --- | --- |
 | `index.html` | One-page layout: hero, experience, projects, education, contact |
 | `resume.html` | Print-optimised résumé |
-| `projects/*.html` | Seven case studies, one per project |
+| `projects/*.html` | Eight case studies, one per project |
 | `assets/css/styles.css` | The whole design system in a single file |
 | `assets/js/main.js` | Theme toggle, scrollspy, section reveal, copy-email, print |
 | `assets/img/` | Portrait and social share card |
@@ -29,6 +29,7 @@ built for printing, and seven case studies that keep the reasoning, not just the
 | 05 | **Door-Unlocking Mechanism** | Arduino-controlled entry system for shared spaces |
 | 06 | **64-bit CPU Project** | Instruction set, datapath, control unit, memory and pipeline, worked end to end |
 | 07 | **Used-Car Price Prediction** | Python regression study from messy listings to a judged model |
+| 08 | **Lazy** | Free, open-source macOS AI companion: voice, screen awareness, gated agent runs and mail triage |
 
 Each one has a case study at `projects/<name>.html`.
 
