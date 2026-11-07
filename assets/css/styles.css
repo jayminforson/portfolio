@@ -11,10 +11,11 @@
   --bg-3:rgba(255,255,255,.085);
   --text:#f2f2f4;
   --text-2:#a9aeb6;
-  --text-3:#787d86;
+  --text-3:#868b93;
   --line:rgba(255,255,255,.11);
   --line-2:rgba(255,255,255,.075);
   --accent:#0a84ff;
+  --accent-solid:#0060d0;
   --accent-ink:#ffffff;
   --accent-soft:rgba(10,132,255,.18);
   --ok:#30d158;
@@ -41,19 +42,28 @@
   --bg-3:rgba(255,255,255,.92);
   --text:#1d1d1f;
   --text-2:#54585f;
-  --text-3:#86868b;
+  --text-3:#696d74;
   --line:rgba(0,0,0,.11);
   --line-2:rgba(0,0,0,.075);
-  --accent:#0071e3;
+  --accent:#0069d9;
   --accent-ink:#ffffff;
-  --accent-soft:rgba(0,113,227,.1);
-  --ok:#34c759;
+  --accent-soft:rgba(0,105,217,.1);
+  --accent-solid:#0069d9;
+  --ok:#179043;
   --shadow:0 16px 40px -28px rgba(0,0,0,.4);
   --glass:rgba(255,255,255,.7);
   --glass-2:rgba(255,255,255,.88);
   --glass-b:rgba(255,255,255,.95);
   --hi:rgba(255,255,255,1);
   --blur:saturate(180%) blur(20px);
+}
+
+/* Increase Contrast: promote the tertiary token to secondary and strengthen
+   the rules. Specificity matches the theme blocks, so this stays below them. */
+@media (prefers-contrast:more){
+  :root{--text-3:var(--text-2);--line:rgba(255,255,255,.3);--line-2:rgba(255,255,255,.22)}
+  :root[data-theme="dark"]{--text-3:var(--text-2);--line:rgba(255,255,255,.3);--line-2:rgba(255,255,255,.22)}
+  :root[data-theme="light"]{--text-3:var(--text-2);--line:rgba(0,0,0,.3);--line-2:rgba(0,0,0,.22)}
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -83,7 +93,7 @@ a{color:inherit;text-decoration:none}
 p{margin:0 0 1.1em}
 ul{margin:0;padding:0;list-style:none}
 button{font:inherit;color:inherit;cursor:pointer}
-::selection{background:var(--accent);color:var(--accent-ink)}
+::selection{background:var(--accent-solid);color:var(--accent-ink)}
 code{font-family:var(--f-mono);font-size:.9em}
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -93,16 +103,23 @@ code{font-family:var(--f-mono);font-size:.9em}
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
 
-/* ---------- glass ---------- */
+/* ---------- glass ----------
+   Layer discipline: blur only on the floating controls. .tag, .fact, .spec,
+   .resume-doc, .proj and .callout are content surfaces and keep their fill,
+   not the material. */
 .glass,
-.sidebar,.topbar,#mobileNav,.pill,.btn,.tag,.iconbtn,.copybtn,.mono-badge,
-.fact,.spec,.resume-doc,.proj,.callout,.nav a.is-active{
+.sidebar,.topbar,#mobileNav,.pill,.btn,.iconbtn,.copybtn,.mono-badge,
+.nav a.is-active{
   -webkit-backdrop-filter:var(--blur);
   backdrop-filter:var(--blur);
 }
+@media (prefers-reduced-transparency:reduce){
+  .glass,.sidebar,.topbar,#mobileNav,.pill,.btn,.iconbtn,.copybtn,.mono-badge,
+  .nav a.is-active{-webkit-backdrop-filter:none;backdrop-filter:none}
+}
 
 /* ---------- layout ---------- */
-.shell{display:block}
+.shell{margin-left:var(--sidebar);min-height:100vh;display:flex;flex-direction:column}
 .sidebar{
   position:fixed;top:0;left:0;bottom:0;width:var(--sidebar);z-index:60;
   padding:clamp(28px,4vh,52px) 30px;
@@ -112,7 +129,7 @@ code{font-family:var(--f-mono);font-size:.9em}
   box-shadow:inset -1px 0 0 var(--hi);
 }
 
-.main{margin-left:var(--sidebar);min-height:100vh;display:flex;flex-direction:column}
+.main{display:flex;flex-direction:column}
 .wrap{width:100%;max-width:calc(var(--col) + 2 * clamp(24px,5vw,72px));
   margin:0 auto;padding:0 clamp(24px,5vw,72px)}
 
@@ -242,10 +259,10 @@ em{font-style:italic;color:var(--text)}
   transform:translateY(-1px)}
 .btn:hover svg{transform:translate(2px,-2px)}
 .btn--solid{
-  background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 92%,white),var(--accent));
-  border-color:color-mix(in srgb,var(--accent) 70%,transparent);
+  background:linear-gradient(180deg,color-mix(in srgb,var(--accent-solid) 92%,white),var(--accent-solid));
+  border-color:color-mix(in srgb,var(--accent-solid) 70%,transparent);
   color:var(--accent-ink);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.32),0 8px 22px -12px color-mix(in srgb,var(--accent) 80%,transparent);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.32),0 8px 22px -12px color-mix(in srgb,var(--accent-solid) 80%,transparent);
 }
 .btn--solid:hover{color:var(--accent-ink);transform:translateY(-1px);
   filter:brightness(1.06)}
@@ -502,9 +519,15 @@ figure{margin:0}
 /* ---------- responsive ---------- */
 @media (max-width:1023px){
   .sidebar{display:none}
-  .main{margin-left:0;padding-top:60px}
+  .shell{margin-left:0}
+  .main{padding-top:60px}
   .topbar{display:flex}
   .proj-ext{opacity:1;transform:none}
+  /* reach Apple's 44pt default without growing the topbar, whose 60px
+     offsets are what #mobileNav and .main padding are built on */
+  .iconbtn{position:relative}
+  .iconbtn::after{content:"";position:absolute;inset:-4px}
+  .copybtn{padding:11px 17px}
 }
 @media (max-width:520px){
   .chan-label{width:auto}
@@ -517,7 +540,7 @@ figure{margin:0}
 @media print{
   *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
   .sidebar,.topbar,#mobileNav,.site-footer,.skip-link,.no-print{display:none!important}
-  .main{margin:0}
+  .shell,.main{margin:0}
   body,body::before{background:#fff!important;color:#000}
   body::before{display:none}
   /* the theme greys are tuned for a dark screen; on paper they wash out.
@@ -537,8 +560,8 @@ figure{margin:0}
 }
 
 /* ---------- compat / refinements ---------- */
-.btn--primary{background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 92%,white),var(--accent));
-  border-color:color-mix(in srgb,var(--accent) 70%,transparent);color:var(--accent-ink);
+.btn--primary{background:linear-gradient(180deg,color-mix(in srgb,var(--accent-solid) 92%,white),var(--accent-solid));
+  border-color:color-mix(in srgb,var(--accent-solid) 70%,transparent);color:var(--accent-ink);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.32)}
 .btn--primary:hover{color:var(--accent-ink);border-color:var(--accent);filter:brightness(1.06)}
 .btn--ghost{background:var(--glass);border-color:var(--glass-b);color:var(--text-2);

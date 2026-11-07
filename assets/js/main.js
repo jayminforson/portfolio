@@ -6,7 +6,12 @@
   /* ---------- theme ---------- */
   var stored = null;
   try { stored = localStorage.getItem('theme'); } catch (e) {}
-  var theme = stored === 'dark' ? 'dark' : 'light';
+  /* an explicit earlier choice wins; with no stored value, follow the system
+     appearance so a visitor already in Dark Mode isn't handed a light page */
+  var theme = (stored === 'dark' || stored === 'light')
+    ? stored
+    : ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ? 'dark' : 'light');
   root.setAttribute('data-theme', theme);
   document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
     b.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
@@ -58,7 +63,10 @@
 
   function setActive(id) {
     spyLinks.forEach(function (a) {
-      a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'location'); }
+      else { a.removeAttribute('aria-current'); }
     });
   }
 
@@ -116,10 +124,15 @@
   /* ---------- copy email ---------- */
   document.querySelectorAll('[data-copy]').forEach(function (b) {
     var original = b.textContent;
+    var status = document.querySelector('[data-copy-status]');
     b.addEventListener('click', function () {
       var val = b.getAttribute('data-copy');
+      /* clear first so a second copy re-announces rather than repeating
+         identical text inside a live region */
+      if (status) { status.textContent = ''; }
       var done = function () {
         b.textContent = 'Copied';
+        if (status) { status.textContent = 'Copied'; }
         setTimeout(function () { b.textContent = original; }, 1600);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
